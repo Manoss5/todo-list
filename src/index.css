@@ -1,13 +1,114 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  font-size: 32px;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(to right, rgb(0, 183, 255), rgb(0, 255, 170));
+}
+
+.todolist {
+  background-color: rgba(240, 248, 255, 0.651);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  width: 15rem;
+  box-shadow: 0.1rem 0.1rem rgb(102, 102, 102);
+}
+
+.add-todo {
+  color: rgb(102, 102, 102);
+  width: 100%;
+  height: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.add-todo input {
+  outline: none;
+  border: none;
+  box-shadow: 0.1rem 0.1rem rgb(102, 102, 102);
+  width: 11rem;
+  height: 100%;
+  font-size: 0.7rem;
+  padding-left: 0.3rem;
+}
+
+.add-todo button {
+  outline: none;
+  border: none;
+  background: none;
+  color: rgb(102, 102, 102);
+  width: 1rem;
+}
+
+.todo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 0.2rem;
+  font-size: 0.8rem;
+  overflow: hidden;
+  height: 1.3rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.todo:hover {
+  height: 7rem;
+}
+
+.todo span {
+  width: 85%;
+}
+
+.todo p {
+  width: 95%;
+  height: 4.5rem;
+  overflow-wrap: break-word;
+  overflow-y: auto;
+}
+
+.todo p::-webkit-scrollbar,
+.todo textarea::-webkit-scrollbar {
+  width: 0.3rem;
+}
+
+.todo p::-webkit-scrollbar-track,
+.todo textarea::-webkit-scrollbar-track {
+  background: rgb(255, 255, 255);
+}
+
+.todo p::-webkit-scrollbar-thumb,
+.todo textarea::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.todo input {
+  width: 85%;
+  height: 0.9rem;
+}
+
+.todo textarea {
+  width: 95%;
+  height: 4.6rem;
+}
+
+.todo input,
+.todo textarea {
+  outline: none;
+  border: none;
+  font-size: 0.8rem;
 }
